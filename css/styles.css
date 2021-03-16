@@ -1,0 +1,292 @@
+/*цвет-акцент #2196F3 */
+/*цвет заголовков #212121;*/
+/*цвет обычного текста  #757575;*/
+/*цвет-акцент текста #FFFFFF;*/
+/*цвет-акцент фона #2F303A;*/
+/*цвет-акцент секции #F5F4FA;*/
+/*section-title - h2*/
+/*section-name - h3*/
+
+:root {
+    --accent-color: #2196F3;  
+    --title-text-color: #212121;
+    --text-color-accent: #ffffff;
+    --background-color:  #E5E5E5;
+    --background-color-accent: #2F303A;
+    --background-color-section: #F5F4FA;
+    --button-focus-color: #188CE8;
+    --body-color: #757575;
+    --projects-border-color: #EEEEEE;
+    --header-border-bottom-color: #ECECEC;
+    --title-font: "Raleway", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--body-color);
+    background-color: var(--text-color-accent);
+    letter-spacing: 0.03em;
+    
+}
+
+h1, h2, h3, h4, h5, h6, ul, p {
+    margin: 0;
+    padding: 0;
+}
+/*общие классы*/ 
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: yellow;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.button {
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 4px;
+} 
+
+
+/*logo*/
+.logo {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+
+}
+.web {
+    color: var(--accent-color);
+}
+.studio-header {
+    color: var(--title-text-color);
+}
+.studio-footer {
+    color: var(--text-color-accent);
+}
+/*навигационная панель*/
+.header {
+    background-color: var(--text-color-accent);
+    border-bottom: 1px solid var(--header-border-bottom-color);
+}
+.nav-list{
+    list-style: none;
+    background-color: yellowgreen;
+}
+.link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+.nav-link {
+    color: var(--title-text-color);
+}
+.nav-link:hover,
+.nav-link:focus,
+.header-link:hover,
+.header-link:focus {
+    color: var(--accent-color);
+}
+.header-link {
+    color: var(--text-color);
+}
+.current {
+    color: var(--accent-color);
+}
+
+/*блок герой*/
+.hero {
+    text-align: center;
+    background-color: var(--background-color-accent);
+}
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-color-accent);
+    margin-bottom: 30px;
+    background-color: yellowgreen;
+}
+.hero-button {
+    display: inline-block;
+    padding: 10px 32px;
+    min-width: 200px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    
+    color: var(--text-color-accent);
+    background-color: var(--accent-color);
+}
+.hero-button:focus,
+.hero-button:hover {
+    background-color: var(--button-focus-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*блок преимущества*/
+
+.advantages-list {
+    list-style: none;
+}
+.advantages-caption {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+.advantages-decription {
+    font-size: 14px;
+    line-height: 1.71;
+}
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px,1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+/*examples - чем мы занимаемся*/
+.section-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--title-text-color);
+}
+.examples-list {
+    list-style: none;
+}
+
+/*team - наша команда*/
+.team {
+    background-color: var(--background-color-section);
+}
+.team-list {
+    list-style: none;
+}
+.section-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: var(--title-text-color);
+}
+.team-person {
+    width: 270px;
+    text-align: center;
+    background-color: var(--text-color-accent);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.team-description {
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+/*footer*/
+.footer {
+    background-color: var(--background-color-accent);
+}
+.address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--text-color-accent);
+}
+.address-mail {
+    text-decoration: none;
+    color: var(--text-color-accent);
+    opacity: 0.6;
+}
+.footer-hover {
+    font-weight: 400;
+}
+.footer-hover:focus,
+.footer-hover:hover {
+    color: var(--accent-color);
+}
+
+
+
+/*PORTFOLIO!!!*/
+
+.projects-title {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden; 
+}
+.projects-list {
+    list-style: none;
+}
+.projects-button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    border: none;
+    color: var(--title-text-color);
+    background-color: var(--background-color-section);
+}
+.projects-button:focus,
+.projects-button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color-accent);
+}
+.projects-gallery {
+    list-style: none;
+}
+.projects-img {
+    display: block;
+}
+.projects-name{
+    padding: 20px 24px 4px 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--title-text-color);
+}
+.projects-description {
+    padding: 0 24px 20px 24px;
+    font-size: 16px;
+    line-height: 1.19;
+}
+.projects-border {
+    
+    width: 370px;
+    background-color: var(--text-color-accent);
+    border-bottom: 1px solid var(--projects-border-color);
+    border-right: 1px solid var(--projects-border-color);
+    border-left: 1px solid var(--projects-border-color);
+}
