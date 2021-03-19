@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, ul, p {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: yellow;
+   /* background-color: darkolivegreen;*/
 }
 .section {
     padding-top: 94px;
@@ -97,9 +97,10 @@ h1, h2, h3, h4, h5, h6, ul, p {
 }
 .nav-list{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin-left: 93px;
-    background-color: yellowgreen;
+   /* background-color: yellowgreen;*/
 }
 .nav-item + .nav-item {
     margin-left: 50px;
@@ -128,30 +129,38 @@ h1, h2, h3, h4, h5, h6, ul, p {
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--text-color);
-    
 }
 
 .header-contacts {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     list-style: none;
     margin-left: auto;
 }
 .nav-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .main {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /*блок герой*/
 .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 600px;
     background-color: var(--background-color-accent);
 }
 .hero-title {
+    max-width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -159,7 +168,7 @@ h1, h2, h3, h4, h5, h6, ul, p {
     text-transform: uppercase;
     color: var(--text-color-accent);
     margin-bottom: 30px;
-    background-color: yellowgreen;
+  /*  background-color: yellowgreen;*/
 }
 .hero-button {
     display: inline-block;
@@ -169,7 +178,6 @@ h1, h2, h3, h4, h5, h6, ul, p {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    
     color: var(--text-color-accent);
     background-color: var(--accent-color);
 }
@@ -183,13 +191,14 @@ h1, h2, h3, h4, h5, h6, ul, p {
 
 .advantages-list {
     display: flex;
-    justify-content: center;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
     list-style: none;
 }
 .advantages-item {
-    flex-basis: calc(100% / 4 - var(--card-set-gap));
-   /* margin-left: var(--card-set-gap);*/
-    /*margin-top: var(--card-set-gap);*/
+    flex-basis: calc((100% - 4 * var(--card-set-gap)) / 4);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 .advantages-item:not(:last-child){
     margin-right: var(--card-set-gap);
@@ -226,8 +235,17 @@ h1, h2, h3, h4, h5, h6, ul, p {
     text-align: center;
     color: var(--title-text-color);
 }
+.examples {
+    padding-top: 0;
+}
 .examples-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
+}
+.examples-list-item:not(:last-child) {
+    margin-right: var(--card-set-gap);
 }
 
 /*team - наша команда*/
@@ -235,29 +253,49 @@ h1, h2, h3, h4, h5, h6, ul, p {
     background-color: var(--background-color-section);
 }
 .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
     list-style: none;
 }
 .section-name {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     color: var(--title-text-color);
 }
 .team-person {
-    width: 270px;
+    flex-basis: calc((100% - 4 * var(--card-set-gap)) / 4);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
     text-align: center;
     background-color: var(--text-color-accent);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 .team-description {
     font-size: 16px;
     line-height: 1.19;
+}
+.team-person-description{
+   padding-top: 30px;
+   padding-bottom: 30px;
+
 }
 
 /*footer*/
 .footer {
     background-color: var(--background-color-accent);
+}
+.footer-container {
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
 }
 .address {
     font-style: normal;
@@ -266,11 +304,15 @@ h1, h2, h3, h4, h5, h6, ul, p {
     color: var(--text-color-accent);
 }
 .address-mail {
+    display: inline-block;
+    padding-bottom: 9px;
     text-decoration: none;
     color: var(--text-color-accent);
     opacity: 0.6;
+
 }
 .footer-hover {
+    padding-bottom: 9px;
     font-weight: 400;
 }
 .footer-hover:focus,
@@ -283,9 +325,17 @@ h1, h2, h3, h4, h5, h6, ul, p {
 /*PORTFOLIO!!!*/
 
 .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
     list-style: none;
 }
+.projects-list-item:not(:last-child){
+    margin-right: 8px;
+}
 .projects-button {
+    padding: 6px 22px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -301,11 +351,9 @@ h1, h2, h3, h4, h5, h6, ul, p {
 }
 .projects-gallery {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     margin-top: calc(-1 * var(--card-set-gap));
     margin-left: calc(-1 * var(--card-set-gap));
-    width: 1200px;
     list-style: none;
 }
 .projects-name{
@@ -329,7 +377,8 @@ h1, h2, h3, h4, h5, h6, ul, p {
     border-left: 1px solid var(--projects-border-color);
 }
 .projects-item {
-    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
 }
+    
